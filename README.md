@@ -10,6 +10,8 @@ Please note: to operate flawlessly the bot only needs permission to change its o
 
 ## Running your own instance
 
+**Java 17 is required!**
+
 1. Clone repository
 2. Run `mvn clean package`
 3. Artifact is in `target/` (`iota-staking-x.x.x.jar`)
