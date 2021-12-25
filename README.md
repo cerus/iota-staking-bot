@@ -2,6 +2,8 @@
 
 A simple Discord bot that provides up-to-date info on the IOTA x SMR x ASMB staking event
 
+Tips: `iota1qrfvzlp6ggleuu8xrh720rzj0ghw7hqkxqt6f8k9caj48xpt3q9csrgklmn`
+
 ## Add official bot to your server
 
 Invite url: https://discord.com/api/oauth2/authorize?client_id=924138704535162910&permissions=67108864&scope=bot
