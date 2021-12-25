@@ -43,7 +43,7 @@ public class StakingInfoBot {
         final String watching = String.format(
                 "%.4f%% @ %s",
                 percent,
-                new SimpleDateFormat("dd MMM HH:mm")
+                new SimpleDateFormat("dd MMM HH:mm z")
                         .format(new Date(info.getLastUpdated()))
         );
         this.jda.getPresence().setPresence(OnlineStatus.DO_NOT_DISTURB, Activity.watching(watching));
