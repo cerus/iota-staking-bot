@@ -17,7 +17,30 @@ Please note: to operate flawlessly the bot only needs permission to change its o
 1. Clone repository
 2. Run `mvn clean package`
 3. Artifact is in `target/` (`iota-staking-x.x.x.jar`)
-4. Run artifact: `IOTASTAKING_TOKEN=your_discord_bot_token java -jar iota-staking-*.jar -Xmx 206M`
+4. Run the artifact
+    1. The old-fashioned way: `IOTASTAKING_TOKEN=your_discord_bot_token java -jar iota-staking-*.jar -Xmx 206M`
+    2. Using docker-compose: Open the spoiler below
+
+<details>
+  <summary>Using docker-compose</summary>
+
+Example `docker-compose.yml`
+
+> Requires an environment variable called `IOTASTAKING_TOKEN` for the Discord bot token (can be in a `.env` file)
+
+```yaml
+version: '3.3'
+
+services:
+  bot:
+    container_name: "iota_staking_bot"
+    image: "openjdk:17"
+    volumes:
+      - "./data:/opt/data"
+    command: "bash -c \"cd /opt/data && IOTASTAKING_TOKEN=\\\"${IOTASTAKING_TOKEN}\\\" java -jar iota-staking-*.jar\""
+```
+
+</details>
 
 ## Images
 
