@@ -1,6 +1,6 @@
 # IOTA staking info bot
 
-A simple Discord bot that provides up-to-date info on the IOTA x SMR x ASMB staking event
+A simple Discord bot that provides up-to-date info on the IOTA x SMR x ASMB staking event. Used on the official [IOTA Discord server](https://discord.iota.org/).
 
 Tips: `iota1qrfvzlp6ggleuu8xrh720rzj0ghw7hqkxqt6f8k9caj48xpt3q9csrgklmn`
 
