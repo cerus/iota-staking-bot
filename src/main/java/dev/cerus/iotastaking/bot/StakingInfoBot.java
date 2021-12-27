@@ -36,6 +36,7 @@ public class StakingInfoBot {
 
         for (final Guild guild : this.jda.getGuilds()) {
             if (guild.getSelfMember().hasPermission(Permission.NICKNAME_CHANGE)) {
+                System.out.println("Updating on guild '" + guild.getName() + "'");
                 guild.getSelfMember().modifyNickname(infoStr).queue();
             }
         }

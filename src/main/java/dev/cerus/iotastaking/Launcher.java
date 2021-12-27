@@ -19,7 +19,7 @@ public class Launcher {
             final TokenInfo info = iotaApi.getLatestTokenInfo();
             bot.updatePresence(info);
             System.out.println("Update: " + info);
-        }, 0, 5, TimeUnit.MINUTES);
+        }, 0, 1, TimeUnit.MINUTES);
 
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             exec.shutdownNow();
