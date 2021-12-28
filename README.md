@@ -47,3 +47,4 @@ services:
 ![Bot ping](https://i.imgur.com/fsc1LTW.png)
 
 ![Bot info](https://i.imgur.com/yQwoqYU.png)
+![Hit counter](https://track.cerus.dev/track/staking)
