@@ -12,15 +12,15 @@ public class FormatUtil {
         if (iota < KI) {
             return iota + " i";
         } else if (iota < MI) {
-            return format(iota, KI) + " ki";
+            return format(iota, KI) + " Ki";
         } else if (iota < GI) {
-            return format(iota, MI) + " mi";
+            return format(iota, MI) + " Mi";
         } else if (iota < TI) {
-            return format(iota, GI) + " gi";
+            return format(iota, GI) + " Gi";
         } else if (iota < PI) {
-            return format(iota, TI) + " ti";
+            return format(iota, TI) + " Ti";
         } else {
-            return format(iota, PI) + " pi";
+            return format(iota, PI) + " Pi";
         }
     }
 
