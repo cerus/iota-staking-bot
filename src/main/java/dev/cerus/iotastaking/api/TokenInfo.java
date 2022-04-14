@@ -20,6 +20,10 @@ public class TokenInfo {
         this.lastUpdated = lastUpdated;
     }
 
+    public boolean isStakingActive() {
+        return this.stakedTokens != Long.MIN_VALUE;
+    }
+
     public long getMigratedTokens() {
         return this.migratedTokens;
     }

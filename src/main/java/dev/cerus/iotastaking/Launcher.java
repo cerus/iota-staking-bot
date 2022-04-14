@@ -16,7 +16,14 @@ public class Launcher {
 
         final ScheduledExecutorService exec = Executors.newSingleThreadScheduledExecutor();
         exec.scheduleAtFixedRate(() -> {
-            final TokenInfo info = iotaApi.getLatestTokenInfo();
+            final TokenInfo info;
+            try {
+                info = iotaApi.getLatestTokenInfo();
+            } catch (final Exception e) {
+                System.err.println("Error: " + e.getMessage());
+                e.printStackTrace();
+                return;
+            }
             bot.updatePresence(info);
             System.out.println("Update: " + info);
         }, 0, 1, TimeUnit.MINUTES);

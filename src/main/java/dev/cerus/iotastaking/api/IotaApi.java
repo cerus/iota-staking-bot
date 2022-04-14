@@ -14,6 +14,9 @@ public class IotaApi {
     public long getStakedTokensAmount() {
         try {
             final String result = this.makeRequest("https://chrysalis.iota.org/api/staking", "GET");
+            if (!result.matches("-?\\d+")) {
+                return Long.MIN_VALUE;
+            }
             return Long.parseLong(result);
         } catch (final IOException e) {
             e.printStackTrace();
