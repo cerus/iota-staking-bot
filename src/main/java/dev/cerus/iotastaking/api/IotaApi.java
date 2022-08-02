@@ -14,8 +14,13 @@ public class IotaApi {
     public long getStakedTokensAmount() {
         try {
             final String result = this.makeRequest("https://chrysalis.iota.org/api/staking", "GET");
-            if (!result.matches("-?\\d+")) {
-                return Long.MIN_VALUE;
+            try {
+                final JsonObject obj = JsonParser.parseString(result).getAsJsonObject();
+                final String maxStakedFunds = obj.get("maxStakedFunds").getAsString();
+                if (maxStakedFunds.matches("\\d+")) {
+                    return Long.parseLong(maxStakedFunds);
+                }
+            } catch (final Throwable ignored) {
             }
             return Long.parseLong(result);
         } catch (final IOException e) {

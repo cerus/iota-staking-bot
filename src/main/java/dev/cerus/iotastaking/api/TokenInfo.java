@@ -1,5 +1,7 @@
 package dev.cerus.iotastaking.api;
 
+import dev.cerus.iotastaking.bot.util.FormatUtil;
+
 public class TokenInfo {
 
     private final long migratedTokens;
@@ -50,6 +52,7 @@ public class TokenInfo {
                 "migratedTokens=" + this.migratedTokens +
                 ", migrationAddresses=" + this.migrationAddresses +
                 ", stakedTokens=" + this.stakedTokens +
+                ", stakedTokensFormatted=" + FormatUtil.formatIota(this.stakedTokens) +
                 ", lockedTokens=" + this.lockedTokens +
                 ", lastUpdated=" + this.lastUpdated +
                 '}';
